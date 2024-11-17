@@ -1,27 +1,27 @@
 
 import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
 
-// Passo 1: Acessar o site
+// Acessar o site
 Given('Eu acesso o site {string}', (url) => {
   cy.visit(url);
 });
 
-// Passo 2: Escolher a opção "Widgets" na página inicial
+//  Escolher a opção "Widgets" na página inicial
 When('Eu escolho a opção {string} na página inicial', (menu) => {
   cy.contains(menu).click().wait(5000);
 });
 
-// Passo 3: Clicar no submenu "Progress Bar"
+//  Clicar no submenu "Progress Bar"
 When('Eu clico no submenu {string}', (submenu) => {
   cy.contains(submenu).click();
 });
 
-// Passo 4: Clicar no botão "Start"
+// Clicar no botão "Start"
 When('Eu clico no botão {string}', (button) => {
   cy.get('#startStopButton').click(); // O ID do botão Start é "startStopButton"
 });
 
-// Passo 5: Esperar até que a barra de progresso atinja 25%
+//  Esperar até que a barra de progresso atinja 25%
 When('Eu clico no botão Start para iniciar a barra de progresso', () => {
   // Clica no botão Start para iniciar a barra de progresso
   cy.get('#startButton').click(); // Verifique o ID ou a classe correta do botão
@@ -66,7 +66,7 @@ When('Eu espero até que a barra de progresso atinja 25%', () => {
 });
 
 
-// Passo 6: Validar que o valor da progress bar é menor ou igual a 25%
+// Validar que o valor da progress bar é menor ou igual a 25%
 Then('O valor da progress bar deve ser menor ou igual a 25%', () => {
   // Clica no botão Start
   cy.get('#startStopButton', { timeout: 10000 })

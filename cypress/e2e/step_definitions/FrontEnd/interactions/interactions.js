@@ -11,7 +11,7 @@ Given('Eu acesso o site {string}', (url) => {
 
 When('Eu escolho a opção {string} na página inicial', (option) => {
   cy.contains(option).click(); // Clica na opção "Interactions"
- // cy.url().should('include', '/interactions'); // Verifica que a URL está correta
+
 });
 
 When('Eu clico no submenu {string}', (submenu) => {

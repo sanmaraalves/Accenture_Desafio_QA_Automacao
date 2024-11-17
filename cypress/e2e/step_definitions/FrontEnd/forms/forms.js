@@ -25,7 +25,7 @@ When("eu preencho o formulário com valores aleatórios", (dataTable) => {
   cy.get(".react-datepicker__year-select").select("1990");
   cy.get(".react-datepicker__month-select").select("January");
   cy.get(".react-datepicker__day--001").first().click();
- // Seleciona o dia 1
+
   
   // Assunto e hobbies
   cy.get(".subjects-auto-complete__value-container").type(data["Subject"] + "{enter}");

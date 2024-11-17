@@ -30,19 +30,15 @@ When('Editar o novo registro criado', () => {
   
   
   cy.get('.rt-tr-group')  
-  .should('be.visible');  // Espera até o modal ser visível
+  .should('be.visible');  
   cy.get('#edit-record-4').click({ force: true });          // Clica no botão de editar
   // Espera que o campo de primeiro nome seja visível e edita
   cy.get('#firstName', { timeout: 10000 }).should('be.visible').clear().type('UpdatedUser8');
   cy.get('#lastName').clear().type('UpdatedLast8');  // Atualiza o sobrenome
 
   // Submete a edição
-  cy.get('#submit').click();  // Ajuste o seletor conforme necessário
+  cy.get('#submit').click();  
 });
-
-
-
-
 
 When('Deletar o novo registro criado', () => {
   // Clica no botão de excluir do registro editado
@@ -66,7 +62,7 @@ When('Criar 12 novos registros dinamicamente', () => {
 
 When('Deletar todos os registros criados', () => {
   // Deleta os 12 registros criados
-  cy.get('.rt-tr-group')  // Se o campo estiver dentro de um modal
+  cy.get('.rt-tr-group')  
   .should('be.visible'); 
   cy.get('#delete-record-4').click({ force: true });
   cy.get('#delete-record-5').click({ force: true });
@@ -85,7 +81,7 @@ When('Deletar todos os registros criados', () => {
 });
 
 Then('A tabela deve estar vazia', () => {
-  // Verifica se a tabela não contém mais registros
+  
   cy.get('.rt-tbody').should('not.contain', 'User8');
   cy.get('.rt-tbody').should('not.contain', 'UpdatedUser8');
 });
