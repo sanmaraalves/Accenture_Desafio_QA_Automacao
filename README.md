@@ -1,5 +1,5 @@
 # Accenture Desafio QA
-Este projeto é uma solução de automação de testes desenvolvida com o Cypress e suporte para a escrita de testes em BDD utilizando o Cucumber. Ele foi projetado para testar uma aplicação baseada na URL base "https://demoqa.com".
+Este projeto é uma solução de automação de testes desenvolvida com o Cypress e suporte para a escrita de testes em BDD utilizando o Cucumber. Ele foi projetado para testar uma aplicação baseada na URL base "https://demoqa.com" e também testar sua API com o swagger "https://demoqa.com/swagger/".
 
 # Dependências Principais
 Cypress: Framework para automação de testes de ponta a ponta.
